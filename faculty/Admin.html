@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Add Students</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5b3d9;
+            background: linear-gradient(160deg, #f5b3d9 6%, #80D0C7 32%, #f5b3d9 100%);
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin: auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Add Students</h2>
+    <form id="addStudentForm">
+        <label for="department">Select Department</label>
+        <select id="department" name="department" required>
+            <option value="bvoc">BVOC Web Technology</option>
+            <option value="bvoc">BSC Computer Science</option>
+            <option value="bvoc">MSC Computer Science</option>
+            <!-- Add more departments if needed -->
+        </select>
+
+        <label for="year">Select Year</label>
+        <select id="year" name="year" required>
+            <option value="1">Year 1</option>
+            <option value="1">Year 2</option>
+            <option value="1">Year 3</option>
+            <!-- Add more years if needed -->
+        </select>
+
+        <label for="regNo">Register Number</label>
+        <input type="text" id="regNo" name="regNo" placeholder="Enter Register Number" required>
+
+        <label for="name">Student Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter Student Name" required>
+
+        <button type="submit">Add Student</button>
+    </form>
+
+    <script>
+        document.getElementById("addStudentForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Get form data
+            const department = document.getElementById("department").value;
+            const year = document.getElementById("year").value;
+            const regNo = document.getElementById("regNo").value.trim();
+            const name = document.getElementById("name").value.trim();
+
+            if (!regNo || !name) {
+                alert("Please fill all fields.");
+                return;
+            }
+
+            // Save to localStorage
+            const key = `${department}_${year}`;
+            const students = JSON.parse(localStorage.getItem("students")) || {};
+            if (!students[key]) {
+                students[key] = [];
+            }
+
+            // Add new student
+            students[key].push({ regNo, name });
+            localStorage.setItem("students", JSON.stringify(students));
+
+            alert("Student added successfully!");
+            event.target.reset();
+        });
+    </script>
+</body>
+</html>
