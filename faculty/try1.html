@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course and Semester Subjects</title>
+    <style>
+        #body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .section {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        .section h3 {
+            margin: 0 0 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1>Course and Semester Subjects</h1>
+    <label for="Bvoc">Bvoc Web Technology
+        <select name="sem" id="Bvoc" onchange="showSubjects('Bvoc')">
+            <option value="" disabled selected>Select Semester</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+    </label>
+    <br><br>
+    <label for="BSC">BSc Computer Science
+        <select name="sem" id="BSC" onchange="showSubjects('BSC')">
+            <option value="" disabled selected>Select Semester</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+    </label>
+    <br><br>
+    <label for="MSC">MSc Computer Science
+        <select name="sem" id="MSC" onchange="showSubjects('MSC')">
+            <option value="" disabled selected>Select Semester</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+    </label>
+    <br><br>
+
+    <!-- Sections for Subjects -->
+    <div id="BSC-sem-2" class="section">
+        <h3>BSc Semester 2 Subjects</h3>
+        <ul>
+            <li><a href="ENG3.html">COMMON ENGLISH A03</a></li>
+            <li><a href="ENG4.html">COMMON ENGLISH A04</a></li>
+            <li><a href="A08E.html">LITERATURE IN LANGUAGES OTHER THAN ENGLISH</a></li>
+            <li><a href="PSC.html">PROBLEM SOLVING USING C</a></li>
+            <li><a href="HPC.html">PROGRAMMING LABORATORY 1: HTML & PROGRAMMING IN C</a></li>
+            <li><a href="CM2.html">COMPLEMENTARY MATHEMATICS 2</a></li>
+            <li><a href="OC2.html">OPTIONAL COMPLEMENTARY 2</a></li>
+        </ul>
+    </div>
+    
+    <div id="BSC-sem-3" class="section">
+        <h3>BSc Semester 3 Subjects</h3>
+        <ul>
+            <a href="A11.html"><li>Python Programming</li></a>
+        </ul>
+    </div>
+    <div id="MSC-sem-1" class="section">
+        <h3>MSc Semester 1 Subjects</h3>
+        <ul>
+            <a href="AA.html"><li>Advanced Algorithms</li></a>
+            <a href="ML.html"><li>Machine Learning Basics</li></a>
+            <a href="RM.html"><li>Research Methodology</li></a>
+            <a href="ADBMS.html"><li>Advanced Database Management Systems</li></a>
+            <a href="CC.html"><li>Cloud Computing</li></a>
+            <a href="AI.html"><li>Artificial Intelligence</li></a>
+        </ul>
+    </div>
+
+    <script>
+        function showSubjects(course) {
+            // Hide all sections
+            const allSections = document.querySelectorAll('.section');
+            allSections.forEach(section => section.style.display = 'none');
+
+            // Get the selected semester
+            const selectedSemester = document.getElementById(course).value;
+
+            // Display the corresponding section
+            const sectionToShow = document.getElementById(`${course}-sem-${selectedSemester}`);
+            if (sectionToShow) {
+                sectionToShow.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
