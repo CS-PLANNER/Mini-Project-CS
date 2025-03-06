@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 40px;
+            padding: 0;
+            background-color: #f5b3d9;
+            background: linear-gradient(160deg, #f5b3d9 6%, #80D0C7 32%, #f5b3d9 100%);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #f4e1f8;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 10px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+        .present {
+            background-color: #67e184;
+        }
+        .absent {
+            background-color: #eb6f7a;
+        }
+        .present.active {
+            box-shadow: 0px 0px 5px #4CAF50;
+        }
+        .absent.active {
+            box-shadow: 0px 0px 5px #eb6f7a;
+        }
+        #submit {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+        #submit:hover {
+            background-color: #45a049;
+        }
+        H2 {
+            text-align: center;
+        }
+    </style>
+    <title>Faculty - Attendance</title>
+</head>
+<body>
+
+    <h2>5th SEM BSC Computer Science</h2>
+    
+    <h1 id="BCS5B10">Principles of Software 
+        Engineering </h1>
+
+    <form id="attendanceForm">
+        <table>
+            <thead>
+                <tr>
+                    <th>Register Number</th>
+                    <th>Student Name</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="studentList">
+                <!-- Dynamic rows will be added here -->
+            </tbody>
+        </table>
+        <br />
+        <button type="submit" id="submit">Submit Attendance</button>
+    </form>
+    </body>
+    </html>
