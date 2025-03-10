@@ -1,45 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b1bfacb7f1e3fc2edc2a410267acbce024ba44af
 document.addEventListener("DOMContentLoaded", function () {
     // Student Form Submission
     const studentForm = document.getElementById("addStudentForm");
     if (studentForm) {
         studentForm.addEventListener("submit", function (event) {
-<<<<<<< HEAD
             event.preventDefault();
 
             const department = document.getElementById("department").value;
             const year = document.getElementById("year").value;
             const regNo = document.getElementById("regNo").value.trim();
             const name = document.getElementById("studentName").value.trim();
-=======
-
-        document.getElementById("addStudentForm").addEventListener("submit", function (event) {
-=======
->>>>>>> b1bfacb7f1e3fc2edc2a410267acbce024ba44af
-            event.preventDefault();
-
-            const department = document.getElementById("department").value;
-            const year = document.getElementById("year").value;
-            const regNo = document.getElementById("regNo").value.trim();
-<<<<<<< HEAD
-            const name = document.getElementById("name").value.trim();
->>>>>>> e4a90543fdda7192f709f4ec4b3ffda37f4d2e69
-=======
-            const name = document.getElementById("studentName").value.trim();
->>>>>>> b1bfacb7f1e3fc2edc2a410267acbce024ba44af
 
             if (!regNo || !name) {
                 alert("Please fill all fields.");
                 return;
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b1bfacb7f1e3fc2edc2a410267acbce024ba44af
             fetch("ad.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -71,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!facId || !name || !email || !phone) {
                 alert("Please fill all fields.");
                 return;
-<<<<<<< HEAD
             }
 
             fetch("ad.php", {
@@ -91,72 +65,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-=======
-            // Save to localStorage
-            const key = `${department}_${year}`;
-            const students = JSON.parse(localStorage.getItem("students")) || {};
-            if (!students[key]) {
-                students[key] = [];
-=======
->>>>>>> b1bfacb7f1e3fc2edc2a410267acbce024ba44af
-            }
-
-            fetch("ad.php", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: `facId=${encodeURIComponent(facId)}&name=${encodeURIComponent(name)}&emailId=${encodeURIComponent(email)}&phNo=${encodeURIComponent(phone)}`
-            })
-            .then(response => response.text())
-            .then(data => {
-                alert(data);
-                event.target.reset();
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                alert("Error adding faculty.");
-            });
-        });
-    }
-<<<<<<< HEAD
-    function fetchPage(page) {
-        fetch(page)
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('content').innerHTML = html;
-        })
-        .catch(error => console.error('Error fetching page:', error));
-    }
-
-    // Load the default page
-    navigateTo('announcements');
-
-
-
-
-    
-
-
-
-    // Back to Top Button Functionality
-    const backToTopBtn = document.getElementById('backToTopBtn');
-
-    // Show or hide the button based on scroll position
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 200) {
-            backToTopBtn.style.display = 'block';
-        } else {
-            backToTopBtn.style.display = 'none';
-        }
-    });
-
-    // Scroll to the top of the page when the button is clicked
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
->>>>>>> e4a90543fdda7192f709f4ec4b3ffda37f4d2e69
-=======
-});
->>>>>>> b1bfacb7f1e3fc2edc2a410267acbce024ba44af
