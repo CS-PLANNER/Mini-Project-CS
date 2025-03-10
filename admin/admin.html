@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <title>Admin - Add Students & Faculty</title>
     <link rel="stylesheet" href="admin.css">
     <script defer src="admin.js"></script>
@@ -12,16 +13,25 @@
     <link rel="stylesheet" href="admin.css">
     <script src="admin.js"></script>
 >>>>>>> e4a90543fdda7192f709f4ec4b3ffda37f4d2e69
+=======
+    <title>Admin - Add Students & Faculty</title>
+    <link rel="stylesheet" href="admin.css">
+    <script defer src="admin.js"></script>
+>>>>>>> b1bfacb7f1e3fc2edc2a410267acbce024ba44af
 </head>
 <body>
     <header class="index">
         <img id="logo" src="vimala logo.jfif" alt="logo" width="23px" height="23px">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b1bfacb7f1e3fc2edc2a410267acbce024ba44af
         <img id="logo1" src="computer.jfif" alt="vimala" width="23px" height="23px">
         CS DEPARTMENT PLANNER
     </header>
 
     <div class="navbar" id="indexnav">
+<<<<<<< HEAD
         <a href="#section1">Add Student</a>
         <a href="#section2">Add Faculty</a>
         <a href="#" onclick="navigateTo('announcements')">Announcements</a>
@@ -78,47 +88,57 @@
       </header>
       <div class="navbar" id="indexnav">
         
+=======
+>>>>>>> b1bfacb7f1e3fc2edc2a410267acbce024ba44af
         <a href="#section1">Add Student</a>
-        <a href="#section2">Add faculty</a>
-         <a href="#" onclick="navigateTo('announcements')"> Announcements</a>
-        <button id="logout" onclick="submit">LogOut</button>
-      </div>
+        <a href="#section2">Add Faculty</a>
+        <a href="#" onclick="navigateTo('announcements')">Announcements</a>
+        <button id="logout">LogOut</button>
+    </div>
 
+    <section id="section1">
+        <h2>Add Students</h2>
+        <form id="addStudentForm" action="http://localhost/Mini-Project-CS/admin.php" method="post">
+            <label for="department">Select Department</label>
+            <select id="department" name="department" required>
+                <option value="Bvoc Web Technology">BVOC Web Technology</option>
+                <option value="BSC Computer Science">BSC Computer Science</option>
+                <option value="MSC Computer Science">MSC Computer Science</option>
+            </select>
 
+            <label for="year">Select Year</label>
+            <select id="year" name="year" required>
+                <option value="1">Year 1</option>
+                <option value="2">Year 2</option>
+                <option value="3">Year 3</option>
+            </select>
 
+            <label for="regNo">Register Number</label>
+            <input type="text" id="regNo" name="regNo" placeholder="Enter Register Number" required>
 
-      
-<section id="section1">
-    <h2>Add Students</h2>
-    <form id="addStudentForm">
-        <label for="department">Select Department</label>
-        <select id="department" name="department" required>
-            <option value="bvoc">BVOC Web Technology</option>
-            <option value="bvoc">BSC Computer Science</option>
-            <option value="bvoc">MSC Computer Science</option>
-            <!-- Add more departments if needed -->
-        </select>
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" name="studentName" placeholder="Enter Student Name" required>
 
-        <label for="year">Select Year</label>
-        <select id="year" name="year" required>
-            <option value="1">Year 1</option>
-            <option value="1">Year 2</option>
-            <option value="1">Year 3</option>
-            <!-- Add more years if needed -->
-        </select>
+            <button type="submit">Add Student</button>
+        </form>
+    </section>
 
-        <label for="regNo">Register Number</label>
-        <input type="text" id="regNo" name="regNo" placeholder="Enter Register Number" required>
+    <section id="section2">
+        <h2>Add Faculty</h2>
+        <form id="addFaculty" action="http://localhost/Mini-Project-CS/admin.php" method="post">
+            <label for="facId">Faculty ID</label>
+            <input type="text" id="facId" name="facId" placeholder="Enter Faculty ID" required>
 
-        <label for="name">Student Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter Student Name" required>
+            <label for="facultyName">Faculty Name</label>
+            <input type="text" id="facultyName" name="facultyName" placeholder="Enter Faculty Name" required>
 
-        <button type="submit">Add Student</button>
-    </form>
-    
-</section>
+            <label for="emailId">Email ID</label>
+            <input type="email" id="emailId" name="emailId" placeholder="Enter Email" required>
 
+            <label for="phNo">Contact Number</label>
+            <input type="number" id="phNo" name="phNo" placeholder="Enter Contact Number" required>
 
+<<<<<<< HEAD
 
 
 <script>
@@ -146,5 +166,10 @@
     </form>
 </section>
 >>>>>>> e4a90543fdda7192f709f4ec4b3ffda37f4d2e69
+=======
+            <button type="submit">Add Faculty</button>
+        </form>
+    </section>
+>>>>>>> b1bfacb7f1e3fc2edc2a410267acbce024ba44af
 </body>
 </html>
