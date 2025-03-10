@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Faculty Profile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #FADADD; /* Rosy Pink */
+            color: #4A235A; /* Deep Purple for contrast */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 20px;
+            background-color: #F9A8D4; /* Soft Pastel Pink */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            max-width: 700px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: #AD1457; /* Darker Pink */
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+            background-color: #F48FB1; /* Light Muted Pink */
+            padding: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #8E24AA;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        input[type="file"] {
+            width: 100%;
+            padding: 6px;
+            margin-top: 3px;
+            border-radius: 5px;
+            border: 1px solid #D81B60;
+            background-color: #FADADD;
+            font-size: 14px;
+        }
+
+        .upload-section {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .btn-upload {
+            background-color: #FFB6C1; /* Light Pink */
+            color: white;
+            border: none;
+            padding: 6px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .btn-upload:hover {
+            background-color: #FF69B4; /* Brighter Pink */
+        }
+
+        .file-upload {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .file-upload label {
+            width: 30%;
+        }
+
+        .file-upload input {
+            width: 60%;
+        }
+
+        .file-upload .btn-upload {
+            width: 30%;
+        }
+
+        /* Submit button styling */
+        .btn-submit {
+            display: block;
+            width: 100%;
+            background-color: #D81B60; /* Dark Pink */
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .btn-submit:hover {
+            background-color: #C2185B; /* Slightly darker pink */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="faculty.jpeg" alt="Faculty image" class="profile-pic">
+        <h2>FACULTY PROFILE</h2>
+
+        <form action="fac.php" method="post">
+            <div class="form-group">
+                <label>Faculty Name</label>
+                <input type="text" placeholder="Enter faculty name">
+            </div>
+
+            <div class="form-group">
+                <label>Faculty ID</label>
+                <input type="text" placeholder="Enter faculty ID">
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="Enter email">
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter phone number">
+            </div>
+
+
+            <h2>FACULTY DOCUMENTS</h2>
+
+            <div class="file-upload">
+                <label>Resume</label>
+                <input type="file">
+                <button class="btn-upload">Upload</button>
+            </div>
+            <div class="file-upload">
+                <label>Research Papers</label>
+                <input type="file">
+                <button class="btn-upload">Upload</button>
+            </div>
+            <div class="file-upload">
+                <label>Certificates</label>
+                <input type="file">
+                <button class="btn-upload">Upload</button>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn-submit">Submit</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
