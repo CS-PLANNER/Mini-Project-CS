@@ -86,4 +86,14 @@ button:hover {
  img{
   padding-right: 2px;
  }
+ .images img{
+    width: 400px; /* Add units */
+    height: 400px; /* Add units */
+    padding-left: 20px; /* Add units */
+    padding-right: 20px; /* Add units */
+    padding-top: 35px;
+    padding-bottom: 40px;
+ }
+
+
 
