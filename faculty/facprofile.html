@@ -8,28 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-        body {
-            background-color: #FADADD; /* Rosy Pink */
-            color: #4A235A; /* Deep Purple for contrast */
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            margin-top: 20px;
-            background-color: #F9A8D4; /* Soft Pastel Pink */
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-            max-width: 700px;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
-            color: #AD1457; /* Darker Pink */
-        }
-
+        
+/* 
         .profile-pic {
             width: 100px;
             height: 100px;
@@ -37,8 +17,8 @@
             display: block;
             margin: 0 auto;
             background-color: #F48FB1; /* Light Muted Pink */
-            padding: 5px;
-        }
+            /* padding: 5px;
+        } */ */
 
         .form-group {
             margin-bottom: 10px;
@@ -59,8 +39,8 @@
             padding: 6px;
             margin-top: 3px;
             border-radius: 5px;
-            border: 1px solid #D81B60;
-            background-color: #FADADD;
+            border: 1px solid #a3a2a2;
+            background-color: #E6D5FF;
             font-size: 14px;
         }
 
@@ -70,7 +50,7 @@
         }
 
         .btn-upload {
-            background-color: #FFB6C1; /* Light Pink */
+            background-color: #3b6975; /* Light Pink */
             color: white;
             border: none;
             padding: 6px;
@@ -81,7 +61,7 @@
         }
 
         .btn-upload:hover {
-            background-color: #FF69B4; /* Brighter Pink */
+            background-color: #1771d7; /* Brighter Pink */
         }
 
         .file-upload {
@@ -106,7 +86,7 @@
         .btn-submit {
             display: block;
             width: 100%;
-            background-color: #D81B60; /* Dark Pink */
+            background-color: #a5649a; /* Dark Pink */
             color: white;
             border: none;
             padding: 10px;
@@ -118,15 +98,26 @@
         }
 
         .btn-submit:hover {
-            background-color: #C2185B; /* Slightly darker pink */
+            background-color: #2b0427; /* Slightly darker pink */
         }
-
+#body{
+    background-color: #e9def8;
+}
+.container {
+            margin-top: 20px;
+            background-color: #d6c0f5; /* Soft Pastel Pink */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            max-width: 700px;
+        }
     </style>
 </head>
-<body>
-
+<body id="body">
+    
+     
     <div class="container">
-        <img src="faculty.jpeg" alt="Faculty image" class="profile-pic">
+        
         <h2>FACULTY PROFILE</h2>
 
         <form action="fac.php" method="post">
@@ -174,6 +165,7 @@
 
         </form>
     </div>
-
+    
+    </script>
 </body>
 </html>
