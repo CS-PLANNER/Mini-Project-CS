@@ -10,7 +10,7 @@
 <body>
     <header class="index">
         <img id="logo" src="vimala logo.jfif" alt="logo" width="23px" height="23px">
-        <img id="logo1" src="computer.jfif" alt="vimala" width="23px" height="23px">
+        <img id="logo1" src="logo.png.jpeg" alt="vimala" width="23px" height="23px">
         CS DEPARTMENT PLANNER
     </header>
 
@@ -20,10 +20,10 @@
         <a href="#" onclick="navigateTo('announcements')">Announcements</a>
         <button id="logout">LogOut</button>
     </div>
-
+    
     <section id="section1">
         <h2>Add Students</h2>
-        <form id="addStudentForm" action="http://localhost/Mini-Project-CS/admin.php" method="post">
+        <form id="addStudentForm" action="http://localhost/Mini-Project-CS/admin/admin.php" method="post">
             <label for="department">Select Department</label>
             <select id="department" name="department" required>
                 <option value="Bvoc Web Technology">BVOC Web Technology</option>
@@ -44,13 +44,13 @@
             <label for="studentName">Student Name</label>
             <input type="text" id="studentName" name="studentName" placeholder="Enter Student Name" required>
 
-            <button type="submit">Add Student</button>
+            <button type="submit" id="formbtn">Add Student</button>
         </form>
     </section>
 
     <section id="section2">
         <h2>Add Faculty</h2>
-        <form id="addFaculty" action="http://localhost/Mini-Project-CS/admin.php" method="post">
+        <form id="addFaculty" action="http://localhost/Mini-Project-CS/admin/admin.php" method="post">
             <label for="facId">Faculty ID</label>
             <input type="text" id="facId" name="facId" placeholder="Enter Faculty ID" required>
 
@@ -63,8 +63,10 @@
             <label for="phNo">Contact Number</label>
             <input type="number" id="phNo" name="phNo" placeholder="Enter Contact Number" required>
 
-            <button type="submit">Add Faculty</button>
+            <button type="submit" id="formbtn">Add Faculty</button>
         </form>
     </section>
+    <img id="images" src="riti.png" alt="">
+    <img id="images" src="blog.png" alt="">
 </body>
 </html>
